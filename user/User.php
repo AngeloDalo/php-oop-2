@@ -2,10 +2,10 @@
 
 class User 
 {
-    protected $ID;
-    protected $name;
-    protected $lastName;
-    protected $CF;
+    public $ID;
+    public $name;
+    public $lastName;
+    public $CF;
 
     public function __construct($ID, $name, $lastName, $CF)
     {

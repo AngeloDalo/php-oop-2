@@ -1,7 +1,7 @@
 <?php
 class Card
 {
-    protected $ID;
+    public $ID;
     protected $number;
     protected $date;
     protected $cvv;

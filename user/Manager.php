@@ -1,7 +1,7 @@
 <?php
 class Manager extends User
 {
-    protected $level;
+    public $level;
     protected $salary;
 
     public function __construct($ID, $name, $lastName, $level, $CF)

@@ -2,11 +2,11 @@
 require_once __DIR__ . '/../user/User.php';
 class Product 
 {
-    protected $name; //nome prodotto
-    protected $price; //prezzo 
-    protected $users = []; //utente
-    protected $managers = []; //managers
-    protected $card = []; //carta di credito
+    public $name; //nome prodotto
+    public $price; //prezzo 
+    public $users = []; //utente
+    public $managers = []; //managers
+    public $card = []; //carta di credito
 
     public function __construct($name, $price)
     {

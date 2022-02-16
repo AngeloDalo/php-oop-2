@@ -15,7 +15,7 @@ require_once __DIR__ . '/user/Manager.php';
 
 try {
     $product = new Product('Iphone 13', 1400);
-    var_dump($product->getName());
+    $product2 = new Product('S8', 1300);
   
     $product->setUsers([
         new User('1', 'Mario', 'Rossi', 'MDFNDL00A21L987H'),
@@ -27,11 +27,35 @@ try {
         new Card('1', '5242345643', '10-12-2023', '454'),
         new Card('2', '3434545564', '12-02-2024', '453'),
     ]);
-    var_dump($product->getUsers());
-    var_dump($product->getCard());
-    var_dump($product->getManagers());
   } catch (Exception $error) {
     echo $error->getMessage();
   }
 
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1><?php echo $product->name ?></h1>
+    <span><?php echo $product-> price ?>&euro;</span>
+    <?php foreach ($product->users as $user) {
+        foreach ($user as $value) {
+            echo $value . ' ';
+        }
+    }?>
+
+    <h1><?php echo $product2->name ?></h1>
+    <span><?php echo $product2-> price ?>&euro;</span>
+    <?php foreach ($product->managers as $manager) {
+        foreach ($manager as $value) {
+            echo $value . ' ';
+        }
+    }?>
+</body>
+</html>
