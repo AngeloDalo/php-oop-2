@@ -45,6 +45,21 @@ class Product
       }
       return $this;
     }
+
+    public function getCard()
+    {
+      return $this->card;
+    }
+    public function setCard(array $card)
+    {
+      foreach ($card as $cardData) {
+        if (!is_object($cardData)) {
+          throw new Exception('Non mi hai passato un oggetto');
+        }
+        $this->card[] = $cardData;
+      }
+      return $this;
+    }
 }
 
 ?>
