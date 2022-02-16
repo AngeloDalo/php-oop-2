@@ -18,14 +18,13 @@ try {
     var_dump($product->getName());
   
     $product->setUsers([
-      new User('Mario', 'Rossi', 'MDFNDL00A21L987H'),
+        new User('1', 'Mario', 'Rossi', 'MDFNDL00A21L987H'),
     ]);
-
     $product->setCard([
-        new Card('5242345643', '10-12-2023', '454'),
-      ]);
+        new Card('1', '5242345643', '10-12-2023', '454'),
+    ]);
     var_dump($product->getUsers());
-    var_dump($product->getCard());
+    var_dump($product->getUsers());
   } catch (Exception $error) {
     echo $error->getMessage();
   }

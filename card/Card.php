@@ -1,15 +1,26 @@
 <?php
 class Card
 {
+    protected $ID;
     protected $number;
     protected $date;
     protected $cvv;
 
-    public function __construct($number, $date, $cvv)
+    public function __construct($ID, $number, $date, $cvv)
     {
+        $this->ID = $ID;
         $this->number = $number;
         $this->date = $date;
         $this->cvv = $cvv;
+    }
+
+    public function getID()
+    {
+        return $this->ID;
+    }
+    public function setID($ID)
+    {
+        $this->ID = $ID;
     }
 
     public function getNumber()

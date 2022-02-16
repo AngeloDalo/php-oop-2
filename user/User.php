@@ -2,15 +2,26 @@
 
 class User 
 {
+    protected $ID;
     protected $name;
     protected $lastName;
     protected $CF;
 
-    public function __construct($name, $lastName, $CF)
+    public function __construct($ID, $name, $lastName, $CF)
     {
+        $this->ID = $ID;
         $this->name = $name;
         $this->lastName = $lastName;
         $this->CF = $CF;
+    }
+
+    public function getID()
+    {
+        return $this->ID;
+    }
+    public function setID($ID)
+    {
+        $this->ID = $ID;
     }
 
     public function getName()
@@ -39,7 +50,6 @@ class User
     {
         $this->CF = $CF;
     }
-
 }
 
 ?>
