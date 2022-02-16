@@ -20,11 +20,16 @@ try {
     $product->setUsers([
         new User('1', 'Mario', 'Rossi', 'MDFNDL00A21L987H'),
     ]);
+    $product->setManagers([
+        new Manager('2', 'Carlo', 'Binachi', '3', 'MBKLD34A23LD90I'),
+    ]);
     $product->setCard([
         new Card('1', '5242345643', '10-12-2023', '454'),
+        new Card('2', '3434545564', '12-02-2024', '453'),
     ]);
     var_dump($product->getUsers());
-    var_dump($product->getUsers());
+    var_dump($product->getCard());
+    var_dump($product->getManagers());
   } catch (Exception $error) {
     echo $error->getMessage();
   }

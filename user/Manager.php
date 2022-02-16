@@ -4,10 +4,13 @@ class Manager extends User
     protected $level;
     protected $salary;
 
-    public function __construct($name, $lastName, $level)
+    public function __construct($ID, $name, $lastName, $level, $CF)
     {
-      parent::__construct($name, $lastName);
-      $this->level = $level;
+        $this->ID = $ID;
+        $this->name = $name;
+        $this->lastName = $lastName;
+        $this->level = $level;
+        $this->CF = $CF;
     }
 
     public function getLevel()

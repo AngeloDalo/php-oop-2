@@ -5,6 +5,7 @@ class Product
     protected $name; //nome prodotto
     protected $price; //prezzo 
     protected $users = []; //utente
+    protected $managers = []; //managers
     protected $card = []; //carta di credito
 
     public function __construct($name, $price)
@@ -42,6 +43,21 @@ class Product
           throw new Exception('Non mi hai passato un oggetto');
         }
         $this->users[] = $user;
+      }
+      return $this;
+    }
+
+    public function getManagers()
+    {
+      return $this->managers;
+    }
+    public function setManagers(array $managers)
+    {
+      foreach ($managers as $manager) {
+        if (!is_object($manager)) {
+          throw new Exception('Non mi hai passato un oggetto');
+        }
+        $this->managers[] = $manager;
       }
       return $this;
     }
